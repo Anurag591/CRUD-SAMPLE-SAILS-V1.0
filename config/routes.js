@@ -27,11 +27,22 @@ module.exports.routes = {
   // '/': {
   //   view: 'pages/homepage'
   // },
+
+  // <----- For TestController ------->
+
   'POST /add' : 'TestController.add',
-  'POST /adds' : 'StestController.create',
-  'GET /find/:id?' : 'StestController.find',
-  'PUT /update/:id?' : 'StestController.update',
-  'DELETE /delete/:id?' : 'StestController.delete',
+  'GET /search' : 'TestController.search',
+  'PUT /change' : 'TestController.change',
+  'DELETE /delete' : 'TestController.delete',
+
+  // <----- For StestController ------->
+  
+  'POST /adds' : 'StestController.creating',
+  'POST /find/:id?' : 'StestController.finding',
+  'PUT /update/:id?' : 'StestController.updating',
+  'DELETE /delete/:id?' : 'StestController.deleting',
+  'GET /promiseAllCheckAsync' : 'StestController.promiseAllCheckAsync',
+  'GET /promiseAllCheckSync' : 'StestController.promiseAllCheckSync',
 
   /***************************************************************************
   *                                                                          *
